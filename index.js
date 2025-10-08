@@ -1,7 +1,12 @@
-const http = require("http");
-const port = process.env.PORT || 8080;
+const express = require('express');
+const app = express();
 
-http.createServer((req, res) => {
-  res.writeHead(200, { "Content-Type": "text/plain" });
-  res.end("Hello Web!\n");
-}).listen(port, () => console.log(`Server running on port ${port}`));
+app.use(express.static('public'));
+
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
+app.listen(8080, () => {
+  console.log('Server running on port 8080');
+});
