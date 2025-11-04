@@ -1,0 +1,26 @@
+{
+  "name": "hello-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "express": "^5.1.0",
+    "rimraf": "^6.0.1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomescuana-byte/hello-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tomescuana-byte/hello-web/issues"
+  },
+  "homepage": "https://github.com/tomescuana-byte/hello-web#readme"
+}
