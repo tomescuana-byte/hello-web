@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 50px auto;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.menu li a {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+
+/* Hover → devine gri */
+.menu li a:hover {
+    background-color: grey;
+}

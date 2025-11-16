@@ -1,0 +1,29 @@
+.container {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+
+.top-middle, .middle-center, .bottom-middle {
+    border-left: none;
+    border-right: none;
+}
+
+.middle-left, .middle-right {
+    border-top: none;
+    border-bottom: none;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
