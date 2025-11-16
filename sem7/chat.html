@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Layout</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+  <div class="chat-shell">
+    <aside class="contact-pane">
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class="contact-list">
+        <div class="contact">
+          <div class="avatar">J</div>
+          <div class="meta">
+            <div class="c-name">Jim</div>
+            <div class="c-status">online</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="avatar">L</div>
+          <div class="meta">
+            <div class="c-name">Lucy</div>
+            <div class="c-status">online</div>
+          </div>
+        </div>
+        <div class="contact">
+          <div class="avatar">M</div>
+          <div class="meta">
+            <div class="c-name">Mark</div>
+            <div class="c-status">offline</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <header class="chat-header">
+      <span class="title">Chat with Jim</span>
+    </header>
+
+    <section class="chat-body">
+      <div class="bubble">
+        <div>Message from me</div>
+        <span class="stamp">10-10-10</span>
+      </div>
+      <div class="bubble">
+        <div>Message from Jim</div>
+        <span class="stamp">10-10-10</span>
+      </div>
+      <div class="bubble">
+        <div>Message from me again</div>
+        <span class="stamp">10-10-10</span>
+      </div>
+    </section>
+
+    <footer class="chat-footer">
+      <input type="text" placeholder="Type a message">
+      <button>&gt;</button>
+    </footer>
+  </div>
+</body>
+</html>

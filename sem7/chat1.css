@@ -1,0 +1,175 @@
+:root {
+  --sidebar-bg: #f2f2f2;
+  --message-mine: #f5f5f5;
+  --message-them: #00ff4c;
+  --text-secondary: #777;
+  --accent-circle: #00c853;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 60px auto 60px;
+  grid-template-areas:
+    "search-bar chat-heading"
+    "contacts chat"
+    "contacts chat-input";
+  height: 100vh;
+}
+
+/* search + contacts */
+
+.sidebar {
+  grid-area: contacts / search-bar / contacts / contacts;
+  display: flex;
+  flex-direction: column;
+  background: var(--sidebar-bg);
+  border-right: 1px solid #e0e0e0;
+}
+
+.search-bar {
+  grid-area: search-bar;
+  padding: 12px;
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-bar input {
+  width: 100%;
+  height: 2em;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+.contacts {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contact {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.contact:nth-child(even) {
+  background: #ffffff;
+}
+
+.contact:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-circle);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.contact-container .status {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* header chat */
+
+.chat-heading {
+  grid-area: chat-heading;
+  background: #fafafa;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.chat-heading .avatar {
+  margin-right: 8px;
+}
+
+.interlocutor {
+  font-weight: bold;
+}
+
+/* zona de mesaje */
+
+.chat {
+  grid-area: chat;
+  padding: 24px 60px;
+  overflow-y: auto;
+}
+
+.chat .message {
+  width: 70%;
+  min-height: 50px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+
+.chat .message .time {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.chat .message .time::before {
+  content: "@";
+  margin-right: 2px;
+}
+
+/* mesajele 1 și 3 – ale mele (gri) */
+.chat .message:nth-child(odd) {
+  background: var(--message-mine);
+  float: left;
+  clear: right;
+}
+
+/* mesajul 2 – de la Jim (verde) */
+.chat .message:nth-child(even) {
+  background: var(--message-them);
+  float: right;
+  clear: left;
+  text-align: right;
+}
+
+/* input jos */
+
+.chat-input {
+  grid-area: chat-input;
+  background: #fafafa;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.chat-input input[type="text"] {
+  width: 320px;
+  padding: 4px 8px;
+}
+
+.chat-input input[type="button"] {
+  padding: 4px 10px;
+}

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2f3e46;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  border: 6px solid #000;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+}
+
+/* model alb/negru */
+.row:nth-child(odd) .square:nth-child(odd),
+.row:nth-child(even) .square:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.row:nth-child(odd) .square:nth-child(even),
+.row:nth-child(even) .square:nth-child(odd) {
+  background: #333;
+}
